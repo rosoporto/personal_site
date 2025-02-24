@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Иван Иванов - Программист</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <header>
+        <h1>Алексей Артемов</h1>
+        <h2>Python Разработчик</h2>
+    </header>
+
+    <main>
+        <section class="about">
+            <h3>Обо мне</h3>
+            <p>Привет! Я программист с 5-летним опытом разработки на Python. 
+               Специализируюсь на веб-разработке и автоматизации.</p>
+        </section>
+
+        <section class="skills">
+            <h3>Навыки</h3>
+            <ul>
+                <li>Python (Flask, Django)</li>
+                <li>HTML/CSS/JavaScript</li>
+                <li>SQL (PostgreSQL, MySQL)</li>
+                <li>Docker</li>
+                <li>Git</li>
+            </ul>
+        </section>
+
+        <section class="contacts">
+            <h3>Контакты</h3>
+            <p>Email: <span id="email"></span></p>
+            <p>Телефон: <a href="#" id="telegram_link"><span id="telegram"></span></a></p>
+            <p>GitHub: <a href="#" id="github_link"><span id="github"></span></a></p>
+        </section>
+        
+        <script>
+            document.getElementById('email').innerText = atob('{{ contacts.email | b64encode }}');            
+
+            const telegram = atob('{{ contacts.telegram | b64encode }}');
+            document.getElementById('telegram').innerText = telegram;
+            document.getElementById('telegram_link').href = telegram;
+
+            const github = atob('{{ contacts.github | b64encode }}');
+            document.getElementById('github').innerText = github;
+            document.getElementById('github_link').href = github;
+        </script>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 rosoporto. Все права защищены.</p>
+    </footer>
+</body>
+</html>
