@@ -65,7 +65,7 @@
 
 
 ## Лицензия
-MIT License. См. LICENSE (добавьте файл лицензии, если нужно).
+MIT License
 
 ## Автор
 Создано yourusername. Свяжитесь через [Telegram](https://t.me/rosoporo)
