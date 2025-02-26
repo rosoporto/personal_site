@@ -40,9 +40,10 @@ def sitemap():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    # Здесь вы можете вернуть HTML-страницу или JSON-ответ
+    app.logger.error('Page not found')
     return render_template('404.html'), 404
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8080)
+

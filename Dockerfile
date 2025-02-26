@@ -19,4 +19,4 @@ ENV PYTHONUNBUFFERED=1
 EXPOSE 8080
 
 # Команда для запуска приложения
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--timeout", "120", "--workers", "4", "app:app"]
