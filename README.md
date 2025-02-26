@@ -57,11 +57,11 @@
 
 2. **Запустите контейнер:**
     ```bash
-    docker run -p 8000:8000 --env-file .env flask-app
+    docker run -p 8080:8080 --env-file .env flask-app
     ```
 
 3. **Проверьте работу приложения:**
-Откройте http://localhost:8000
+Откройте http://localhost:8080
 
 
 ## Лицензия

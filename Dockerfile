@@ -16,7 +16,7 @@ COPY . .
 ENV PYTHONUNBUFFERED=1
 
 # Указываем порт, который будет использовать приложение
-EXPOSE 8000
+EXPOSE 8080
 
 # Команда для запуска приложения
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
