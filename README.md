@@ -68,4 +68,4 @@
 MIT License
 
 ## Автор
-Создано yourusername. Свяжитесь через [Telegram](https://t.me/rosoporo)
+Создано @rosoporo. Свяжитесь через [Telegram](https://t.me/rosoporo)
